@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../foto.png/logo baru.png" type="image/png">
+    <title>Toko Roti Enak - Bakery Terbaik</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../foto.png/logo baru.png" alt="Logo Toko Roti Enak " style="width: 50px;" />
+                Toko Roti Enak
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="#hero" class="active"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="#menu"><i class="fas fa-utensils"></i> Menu</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> Tentang</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Selamat Datang di Toko Roti Enak</h1>
+            <p>Roti segar setiap hari, dibuat dengan cinta dan bahan terbaik.</p>
+            <a href="#menu" class="btn">Lihat Menu</a>
+        </div>
+    </section>
+
+    <section id="menu">
+        <h2>Menu Kami</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="../foto.png/Roti Tawar.jpeg" alt="Roti Tawar" />
+                <h3>Roti Tawar</h3>
+                <p>Rp 15.000</p>
+                <button onclick="addToOrder('Roti Tawar', 15000)">Tambah ke Pesanan</button>
+            </div>
+            <div class="menu-item">
+                <img src="../foto.png/Chocolate Chip Brownies.jpeg" alt="Kue Brownies" />
+                <h3>Kue Brownies</h3>
+                <p>Rp 25.000</p>
+                <button onclick="addToOrder('Kue Brownies', 25000)">Tambah ke Pesanan</button>
+            </div>
+            <div class="menu-item">
+                <img src="../foto.png/Croissant 🥐.jpeg" alt="Croissant" />
+                <h3>Croissant</h3>
+                <p>Rp 20.000</p>
+                <button onclick="addToOrder('Croissant', 20000)">Tambah ke Pesanan</button>
+            </div>
+            <div class="menu-item">
+                <img src="../foto.png/Roti Manis.jpeg" alt="Roti Manis" />
+                <h3>Roti Manis</h3>
+                <p>Rp 18.000</p>
+                <button onclick="addToOrder('Roti Manis', 18000)">Tambah ke Pesanan</button>
+            </div>
+        </div>
+        <div id="order-summary">
+            <h3>Ringkasan Pesanan</h3>
+            <ul id="order-list"></ul>
+            <p>Total: Rp <span id="total">0</span></p>
+            <button onclick="clearOrder()">Hapus Pesanan</button>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Tentang Kami</h2>
+        <p>Toko Roti Enak adalah tempat di mana tradisi pembuatan roti bertemu dengan inovasi modern. Kami menggunakan bahan-bahan alami dan resep turun-temurun untuk menghasilkan roti yang lezat dan berkualitas tinggi.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Kontak Kami</h2>
+        <form id="contact-form">
+            <input name="name" type="text" placeholder="Nama" required />
+            <input name="email" type="email" placeholder="Email" required />
+            <textarea name="message" placeholder="Pesan" required></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+    </section>
+
+    <div class="copyright-center">
+        <p>&copy; 2025 Toko Roti Enak. Semua hak dilindungi.</p>
+    </div>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="../foto.png/logo baru.png" alt="Logo Toko Roti Enak" style="width: 50px;" />
+            <span>Toko Roti Enak</span>
+        </div>
+        <div class="social-media">
+            <a href="https://www.instagram.com/izz_prime/" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
