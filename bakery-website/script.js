@@ -129,4 +129,48 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Floating Button Modal
+    const floatingBtn = document.getElementById('floating-btn');
+    const modal = document.getElementById('modal');
+    const closeBtn = document.querySelector('.close-btn');
+
+    floatingBtn.addEventListener('click', () => {
+        modal.style.display = 'block';
+        anime({
+            targets: '.modal-content',
+            scale: [0.8, 1],
+            opacity: [0, 1],
+            duration: 400,
+            easing: 'easeOutQuad'
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        anime({
+            targets: '.modal-content',
+            scale: [1, 0.8],
+            opacity: [1, 0],
+            duration: 300,
+            easing: 'easeInQuad',
+            complete: () => {
+                modal.style.display = 'none';
+            }
+        });
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            anime({
+                targets: '.modal-content',
+                scale: [1, 0.8],
+                opacity: [1, 0],
+                duration: 300,
+                easing: 'easeInQuad',
+                complete: () => {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+    });
 });
